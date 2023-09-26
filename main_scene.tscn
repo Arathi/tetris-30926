@@ -12,16 +12,19 @@ position = Vector2(8, 8)
 scale = Vector2(4, 4)
 
 [node name="activeBlock" parent="Node" instance=ExtResource("2_r6vmy")]
+metadata/falling = true
 metadata/type = 5
 
 [node name="I" type="Node2D" parent="Node"]
 position = Vector2(0, 32)
 
 [node name="BlockI_0" parent="Node/I" instance=ExtResource("2_r6vmy")]
+metadata/falling = true
 metadata/type = 1
 
 [node name="BlockI_1" parent="Node/I" instance=ExtResource("2_r6vmy")]
 position = Vector2(32, 0)
+metadata/falling = true
 metadata/type = 1
 metadata/direction = 1
 
@@ -29,12 +32,21 @@ metadata/direction = 1
 position = Vector2(0, 64)
 
 [node name="Block_0" parent="Node/J" instance=ExtResource("2_r6vmy")]
+metadata/falling = true
 metadata/type = 2
 
 [node name="Block_1" parent="Node/J" instance=ExtResource("2_r6vmy")]
 position = Vector2(32, 0)
+metadata/falling = true
 metadata/type = 2
 metadata/direction = 1
+
+[node name="O" type="Node2D" parent="Node"]
+
+[node name="Block" parent="Node/O" instance=ExtResource("2_r6vmy")]
+position = Vector2(64, 32)
+metadata/falling = true
+metadata/type = 4
 
 [node name="Node2D2" type="Node2D" parent="Node"]
 visible = false
