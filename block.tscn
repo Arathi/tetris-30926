@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://1vfissf3vrl0"]
+
+[ext_resource type="Script" path="res://block.gd" id="1_gdl7c"]
+[ext_resource type="PackedScene" uid="uid://bdev18e4vqxqo" path="res://block_tile.tscn" id="2_xpu1k"]
+
+[node name="Block" type="Node2D"]
+script = ExtResource("1_gdl7c")
+metadata/falling = false
+metadata/type = 0
+metadata/direction = 0
+
+[node name="tile1" parent="." instance=ExtResource("2_xpu1k")]
+
+[node name="tile2" parent="." instance=ExtResource("2_xpu1k")]
+position = Vector2(8, 8)
+
+[node name="tile3" parent="." instance=ExtResource("2_xpu1k")]
+position = Vector2(16, 16)
+
+[node name="tile4" parent="." instance=ExtResource("2_xpu1k")]
+position = Vector2(24, 24)

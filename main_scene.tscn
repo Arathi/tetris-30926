@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmvond5tjjw71"]
+
+[ext_resource type="Script" path="res://main_scene.gd" id="1_lwg6d"]
+[ext_resource type="PackedScene" uid="uid://bdev18e4vqxqo" path="res://block_tile.tscn" id="1_uw26x"]
+[ext_resource type="PackedScene" uid="uid://1vfissf3vrl0" path="res://block.tscn" id="2_r6vmy"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_lwg6d")
+
+[node name="Node" type="Node2D" parent="."]
+position = Vector2(8, 8)
+scale = Vector2(4, 4)
+
+[node name="activeBlock" parent="Node" instance=ExtResource("2_r6vmy")]
+metadata/type = 5
+
+[node name="I" type="Node2D" parent="Node"]
+position = Vector2(0, 32)
+
+[node name="BlockI_0" parent="Node/I" instance=ExtResource("2_r6vmy")]
+metadata/type = 1
+
+[node name="BlockI_1" parent="Node/I" instance=ExtResource("2_r6vmy")]
+position = Vector2(32, 0)
+metadata/type = 1
+metadata/direction = 1
+
+[node name="J" type="Node2D" parent="Node"]
+position = Vector2(0, 64)
+
+[node name="Block_0" parent="Node/J" instance=ExtResource("2_r6vmy")]
+metadata/type = 2
+
+[node name="Block_1" parent="Node/J" instance=ExtResource("2_r6vmy")]
+position = Vector2(32, 0)
+metadata/type = 2
+metadata/direction = 1
+
+[node name="Node2D2" type="Node2D" parent="Node"]
+visible = false
+
+[node name="BlockTileTop" parent="Node/Node2D2" instance=ExtResource("1_uw26x")]
+position = Vector2(8, 0)
+metadata/bottom = true
+
+[node name="BlockTileLeft" parent="Node/Node2D2" instance=ExtResource("1_uw26x")]
+position = Vector2(0, 8)
+metadata/right = true
+
+[node name="BlockTileMiddle" parent="Node/Node2D2" instance=ExtResource("1_uw26x")]
+position = Vector2(8, 8)
+metadata/right = true
+metadata/top = true
+metadata/left = true
+metadata/bottom = true
+
+[node name="BlockTileRight" parent="Node/Node2D2" instance=ExtResource("1_uw26x")]
+position = Vector2(16, 8)
+metadata/left = true
+
+[node name="BlockTileBottom" parent="Node/Node2D2" instance=ExtResource("1_uw26x")]
+position = Vector2(8, 16)
+metadata/top = true
